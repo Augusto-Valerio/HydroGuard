@@ -1,0 +1,102 @@
+header {
+  background-color: #121212;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 72px;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d9d9d9;
+  letter-spacing: 3px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin-left: 32px;
+}
+
+.menu-hamburger {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: white;
+  font-size: 32px;
+  display: none;
+}
+
+.menu-hamburger:focus {
+  outline: none;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  #logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #121212;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .menu-hamburger {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
