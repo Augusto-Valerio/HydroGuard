@@ -270,5 +270,21 @@ h1 {
         height: 0.5rem;
         margin: 0 0.25rem;
     }
+    body {
+     width: 100vw;
+   
+    }
+    .navigation-auto {
+      width: 0.5rem;
+      height: 0.5rem;
+      position: absolute;
+      bottom: 0.9375rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0rem;
 }
+    
+}
+
 }
