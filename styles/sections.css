@@ -337,16 +337,16 @@ h1 {
   min-height: 100vh;
   width: 100%;
 
-  .slider-quem {
-  width: 95vw;
-  height: 80vh;
-  max-width: 120rem;
-  max-height: 90vh;
-  position: relative;
-  overflow: hidden;
-  margin: 2rem auto;
-  border-radius: 2rem;
-  background: #000;
+.slider-quem {
+    width: 91%;
+    height: 80vh;
+    max-width: 120rem;
+    max-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem auto;
+    border-radius: 2rem;
+   
 }
 
 .slides-quem {
@@ -367,16 +367,13 @@ h1 {
   justify-content: center;
   border-radius: 2rem;
   overflow: hidden;
-  background: #000;
 }
 
 .slide-quem img {
-  width: 100%;
-  height: 100%;
+  width: 96%;
+  height: 95%;
  
   border-radius: 2rem;
-  display: block;
-  background: #000;
 }
 
 .quem-texto {
@@ -384,14 +381,14 @@ h1 {
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   padding: 2.5rem 3rem;
   border-radius: 1.2rem;
   text-align: right;
-  color: #000000;
+  color: #ffffff;
   min-width: 320px;
   max-width: 45%;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 24px rgba(255, 255, 255, 0.1);
   z-index: 2;
 }
 
@@ -412,6 +409,88 @@ h1 {
   display: none;
 }
 
+#radio1-quem:checked ~ .first-quem { margin-left: 0; }
+#radio2-quem:checked ~ .first-quem { margin-left: -20%; }
+#radio3-quem:checked ~ .first-quem { margin-left: -40%; }
+#radio4-quem:checked ~ .first-quem { margin-left: -60%; }
+#radio5-quem:checked ~ .first-quem { margin-left: -80%; }
 
+.manual-navigation-quem {
+  position: absolute;
+  bottom: 6.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.manual-btn-quem {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 0.125rem solid #000000;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  background: transparent;
+}
+
+.manual-btn-quem:hover {
+  background-color: #0044ff;
+}
+
+.navigation-auto-quem {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.navigation-auto-quem div {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 0.125rem solid #20a6ff;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+  transition: background 0.5s;
+  background: transparent;
+}
+
+#radio1-quem:checked ~ .navigation-auto-quem .auto-btn1-quem { background-color: #fff; }
+#radio2-quem:checked ~ .navigation-auto-quem .auto-btn2-quem { background-color: #fff; }
+#radio3-quem:checked ~ .navigation-auto-quem .auto-btn3-quem { background-color: #fff; }
+#radio4-quem:checked ~ .navigation-auto-quem .auto-btn4-quem { background-color: #fff; }
+#radio5-quem:checked ~ .navigation-auto-quem .auto-btn5-quem { background-color: #fff; }
+
+@media (max-width: 900px) {
+  .slider-quem {
+    width: 98vw;
+    height: 40vh;
+    min-height: 16rem;
+    border-radius: 1rem;
+  }
+  .slide-quem, .slide-quem img {
+    border-radius: 1rem;
+  }
+  .quem-texto {
+    position: static;
+    transform: none;
+    background: rgba(0,0,0,0.5);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    min-width: unset;
+    max-width: 100%;
+    margin-top: -5rem;
+  }
+  .quem-texto h2 {
+    font-size: 1.2rem;
+  }
+  .quem-texto p {
+    font-size: 1rem;
+  }
+}
 }
   
