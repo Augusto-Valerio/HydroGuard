@@ -12,7 +12,13 @@
     align-items: center;
     padding-top: 6.5rem;  
     
-   
+   img {
+
+    @media (min-width: 320px) and (max-width: 1339px) {
+      width: 100vw;
+      
+    }
+   }
   
     .text {
       position: absolute;
@@ -23,19 +29,32 @@
       flex-direction: column;
       gap: 8rem;
 
-     
+      @media (min-width: 320px) and (max-width: 1339px) {
+        
+        top: 16%;
+        left: 5%;
+
+        gap: 5rem;
+      }
       
       h1 {
         width: 63.563rem;
         font: var(--h1);
        
-      
+        @media (min-width: 320px) and (max-width: 1339px) {
+          font-weight: 400;
+          font-size: 1rem;
+          width: 100%;
+        }
        }
        
        p {
          font: var(--subtitle);
   
-    
+         @media (min-width: 320px) and (max-width: 1339px) {
+           font-weight: 400;
+           font-size: 0.8rem;
+         }
        }
      }  
     }   
@@ -43,6 +62,9 @@
     .arrowDown {
       padding-block: 1.25rem 0.5rem;
 
-      
+      @media (min-width: 320px) and (max-width: 1339px) {
+        padding-block: 1.25rem 0.5rem;
+        
+      }
     }
   }
