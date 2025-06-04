@@ -68,3 +68,131 @@
       }
     }
   }
+
+#technologies {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    background-color: black;
+}
+
+h1 {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.slider {
+    width: 25rem;
+    height: 21.875rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 700%;
+    height: 100%;
+}
+
+.slide {
+    width: 14.2857%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    transition: margin-left 1s ease-in-out;
+    padding-top: 0.625rem;
+}
+
+.slide h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+}
+
+.slide img {
+    width: 6.25rem;
+    height: 6.25rem;
+    margin-bottom: 0.75rem;
+    align-items: center;
+}
+
+.slide p {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    max-width: 17.5rem;
+}
+
+.slides input {
+    display: none;
+}
+
+.manual-navigation {
+    position: absolute;
+    bottom: 0.9375rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.125rem solid #fff;
+    border-radius: 50%;
+    margin: 0 0.3125rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+.navigation-auto {
+    position: absolute;
+    bottom: 0.9375rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div {
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.125rem solid #20a6ff;
+    border-radius: 50%;
+    margin: 0 0.3125rem;
+    transition: background 0.5s;
+}
+
+
+
+
+}
