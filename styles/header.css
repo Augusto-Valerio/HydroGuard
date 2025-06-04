@@ -1,0 +1,52 @@
+header {
+  background-color: #121212;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 72px;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d9d9d9;
+  letter-spacing: 3px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin-left: 32px;
+}
+
+.menu-hamburger {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: white;
+  font-size: 32px;
+  display: none;
+}
+
+.menu-hamburger:focus {
+  outline: none;
+}
