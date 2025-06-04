@@ -1,0 +1,25 @@
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    color: var(--textColor);
+  }
+  
+  :root {
+    --textColor: #DDDDDD;
+    --bodyColor: #000000;
+    --headerColor: #121212;
+    --navColor: #D9D9D9;
+  
+    /* Variáveis de fontes para 'Desktop' */
+    --font-family: "Poppins", sans-serif;
+    --textNav: 400 1.25rem/1.875rem --font-family;
+    --h1: 400 3.125rem var(--font-family);
+    --subtitle: 400 1.875rem var(--font-family);
+    --text-sm: 400 0.813rem var(--font-family);
+    --text-lg: 700 4.375rem var(--font-family);
+    --slideText: 400 1.438rem var(--font-family);
+    --finalText:400 2.688rem var(--font-family);
+    --finalText-bold: 700 2rem var(--font-family);
+  }
