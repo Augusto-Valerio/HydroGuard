@@ -1,0 +1,48 @@
+#initial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  
+  background-color: var(--bodyColor); 
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6.5rem;  
+    
+   
+  
+    .text {
+      position: absolute;
+      top: 30%;
+      left: 20%;
+  
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+
+     
+      
+      h1 {
+        width: 63.563rem;
+        font: var(--h1);
+       
+      
+       }
+       
+       p {
+         font: var(--subtitle);
+  
+    
+       }
+     }  
+    }   
+    
+    .arrowDown {
+      padding-block: 1.25rem 0.5rem;
+
+      
+    }
+  }
