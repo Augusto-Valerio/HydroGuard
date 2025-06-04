@@ -68,3 +68,207 @@
       }
     }
   }
+
+#technologies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    background-color: black;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.slider {
+    width: 35rem;         
+    height: 28rem;        
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 700%;
+    height: 100%;
+}
+
+.slide {
+    width: 14.2857%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    transition: margin-left 1s ease-in-out;
+    padding-top: 0.625rem;
+}
+
+.slide h3 {
+    font-size: 1.400rem;
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+}
+
+
+.slider {
+    width: 35rem;         
+    height: 28rem;       
+    position: relative;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 9rem;          
+    height: 9rem;
+    margin-bottom: 1.2rem;
+}
+
+.slide h3 {
+    font-size: 1.7rem;    
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.slide p {
+    font-size: 1.1rem;    
+    line-height: 1.6;
+    max-width: 25rem;
+}
+
+
+.slides input {
+    display: none;
+}
+
+.manual-navigation {
+    position: absolute;
+    bottom: 0.9375rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.manual-btn {
+    width: 0.625rem;
+    height: 0.625rem;
+    bottom: 1rem;
+    border: 0.125rem solid #fff;
+    border-radius: 50%;
+    margin: 0 0.3125rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 3rem;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+.navigation-auto {
+    position: absolute;
+    bottom: 0.9375rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.navigation-auto div {
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.125rem solid #20a6ff;
+    border-radius: 50%;
+    margin: 0 0.3125rem;
+    transition: background 0.5s;
+}
+
+
+#radio1:checked ~ .first { margin-left: 0; }
+#radio2:checked ~ .first { margin-left: -14.2857%; }
+#radio3:checked ~ .first { margin-left: -28.5714%; }
+#radio4:checked ~ .first { margin-left: -42.8571%; }
+#radio5:checked ~ .first { margin-left: -57.1428%; }
+#radio6:checked ~ .first { margin-left: -71.4285%; }
+#radio7:checked ~ .first { margin-left: -85.7142%; }
+
+#radio1:checked ~ .navigation-auto .auto-btn1 { background-color: #ffffff; }
+#radio2:checked ~ .navigation-auto .auto-btn2 { background-color: #fff; }
+#radio3:checked ~ .navigation-auto .auto-btn3 { background-color: #fff; }
+#radio4:checked ~ .navigation-auto .auto-btn4 { background-color: #fff; }
+#radio5:checked ~ .navigation-auto .auto-btn5 { background-color: #fff; }
+#radio6:checked ~ .navigation-auto .auto-btn6 { background-color: #fff; }
+#radio7:checked ~ .navigation-auto .auto-btn7 { background-color: #fff; }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .slide h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .slide img {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .slide p {
+        font-size: 0.75rem;
+        line-height: 1.3;
+        max-width: 16rem;
+    }
+
+    .manual-btn,
+    .navigation-auto div {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin: 0 0.25rem;
+    }
+}
+}
