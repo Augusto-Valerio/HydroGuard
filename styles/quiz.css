@@ -1,7 +1,19 @@
+#quizApp {
+  padding-bottom: 73px;
+  
+  .quizText {
+    display: flex;
+    justify-content: center;
+
+    font: var(--h1);
+    margin-bottom: 1.438rem;
+  }
+}
+
 .app {
   background: #ffff;
-  width: 80%;
-  margin: 6.25rem auto 0;
+  width: 87%;
+  margin: auto;
   padding: 1.875rem;
   border-radius: 1rem;
 
