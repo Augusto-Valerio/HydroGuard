@@ -494,3 +494,98 @@ h1 {
 }
 }
   
+.section {
+    width: 100%;
+    position: relative;
+    min-height: 34rem;
+    overflow: hidden;
+    background-image: url('./images/fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
+    font-size: 2.688rem;
+    color: #ddd;
+    font-family: Poppins;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.shape, .img-familia {
+    border-radius: 2rem;
+    width: 90%;
+    max-width: 22.938rem;
+    height: auto;
+}
+
+.shape {
+    background-color: #002e5b;
+    aspect-ratio: 3 / 2;
+}
+
+.img-familia {
+    object-fit: cover;
+}
+
+.texto-esquerda, .texto-direita {
+    width: 90%;
+    max-width: 42.813rem;
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 4rem;
+    }
+
+    .texto-esquerda, .texto-direita {
+        font-size: 2rem;
+    }
+
+    .shape, .img-familia {
+        border-radius: 6.25rem;
+        width: 22.938rem;
+        height: 15.313rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section {
+        height: 33.938rem;
+    }
+
+    .texto-esquerda {
+        position: absolute;
+        top: 2.688rem;
+        left: 5.438rem;
+    }
+
+    .texto-direita {
+        position: absolute;
+        top: 19.438rem;
+        left: 33.938rem;
+    }
+
+    .shape {
+        position: absolute;
+        top: 13.5rem;
+        left: -5.625rem;
+    }
+
+    .img-familia {
+        position: absolute;
+        top: 17rem;
+        left: 4.813rem;
+    }
+}
