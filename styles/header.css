@@ -1,13 +1,21 @@
+html, body {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   background-color: #000;
   position: fixed ;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
   height: 72px;
   width: 100%;
-  z-index: auto !important;
+  z-index: 1000 !important;
 }
 
 .nav-centralizar {
@@ -130,6 +138,7 @@ body.dark-mode #toggle-mode {
 
   .menu-hamburger {
     display: block;
+    left: 20%;
   }
 }
 
