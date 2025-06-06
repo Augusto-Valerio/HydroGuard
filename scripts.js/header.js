@@ -42,3 +42,16 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li"
 );
 mobileNavbar.init();
+
+const toggleButton = document.querySelector('#toggle-mode');
+const body = document.body;
+
+const savedTheme = localStorage.getItem('theme') || 
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+if (savedTheme === 'dark') body.classList.add('dark-mode');
+
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+});
