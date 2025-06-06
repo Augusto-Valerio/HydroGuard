@@ -3,11 +3,35 @@ header {
   position: fixed ;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
 
   height: 72px;
   width: 100%;
   z-index: auto !important;
+}
+
+.nav-centralizar {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+@media (max-width: 999px) {
+  .nav-centralizar {
+    position: static;
+    left: auto;
+    top: auto;
+    height: auto;
+    transform: none;
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 
 nav ul {
