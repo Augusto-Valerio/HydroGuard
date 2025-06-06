@@ -1,3 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: var(--text-color, #000); 
+  background-color: var(--bg-color, #fff);
+  transition: 
+    color 0.3s ease, 
+    background-color 0.3s ease;
+}
+
+body.dark-mode {
+  --text-color: #fff;
+  --bg-color: #121212; 
+  
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+#fundo-troca {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: var(--bg-image, url('../assets/images/Background3light.png'));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 
+    background-image 0.5s ease,
+    opacity 0.3s ease;
+}
+
+body.dark-mode #fundo-troca {
+  --bg-image: url('../assets/images/Background3dark.png');
+  opacity: 0.9;
+}
+
+#toggle-mode {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: var(--toggle-bg, #FFD700);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 
+    background 0.3s ease,
+    transform 0.2s ease;
+  background-image: var(--toggle-icon, url('/assets/icons/sol.svg'));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+body.dark-mode #toggle-mode {
+  --toggle-bg: #ffffff;
+  --toggle-icon: url('/assets/icons/moon-stars.svg');
+}
+
+#toggle-mode:hover {
+  transform: scale(1.1);
+}
+
+main, section, footer, .container, 
+body > *:not(#fundo-troca) {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+}
+
 #initial {
   display: flex;
   flex-direction: column;
@@ -26,7 +98,7 @@
       gap: 8rem;
 
       @media (min-width: 320px) and (max-width: 1339px) {
-        top: 16%;
+        top: 30%;
         left: 5%;
         gap: 5rem;
       }
@@ -72,7 +144,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: inherit;
 }
 
 
@@ -272,12 +344,14 @@ h1 {
 }
 
 #objective {
-    background-image: url(../assets/images/Background3.png);
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
-    
+    * {
+    color: inherit;
+}
 
+    
     h1 {
       font: var(--h1);
       margin-bottom: 1.25rem;
@@ -334,6 +408,7 @@ h1 {
 *{
     margin: 0;
     padding: 0;
+    color: inherit;
   }
 
 .h1 {
@@ -381,12 +456,12 @@ h1 {
 .quem-texto {
   position: absolute;
   right: 14rem;
-  top: 50%;
+  top: 35%;
   background: rgba(0, 0, 0, 0.35);
   padding: 2.5rem 3rem;
   border-radius: 1.2rem;
   text-align: right;
-  color: #ffffff;
+  color: inherit;
   min-width: 320px;
   max-width: 45%;
   box-shadow: 0 4px 24px rgba(255, 255, 255, 0.1);
@@ -397,12 +472,12 @@ h1 {
   font-size: 2.3rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: inherit;
 }
 
 .quem-texto p {
   font-size: 1.4rem;
-  color: #ffffff;
+  color: inherit;
   opacity: 0.95;
 }
 
@@ -465,7 +540,7 @@ h1 {
 #radio4-quem:checked ~ .navigation-auto-quem .auto-btn4-quem { background-color: #fff; }
 #radio5-quem:checked ~ .navigation-auto-quem .auto-btn5-quem { background-color: #fff; }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .slider-quem {
     width: 98vw;
     height: 40vh;
@@ -500,13 +575,12 @@ h1 {
     position: relative;
     min-height: 34rem;
     overflow: hidden;
-    background-image: url('./images/fundo.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     text-align: center;
     font-size: 2.688rem;
-    color: #ddd;
+    color: inherit;
     font-family: Poppins;
     padding: 2rem;
     box-sizing: border-box;
@@ -515,6 +589,9 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+
+* {
+    color: inherit;
 }
 
 .shape, .img-familia {
@@ -539,9 +616,23 @@ h1 {
     display: block;
     text-align: left;
     font-size: 1.5rem;
+    color: inherit; 
 }
 
-@media (min-width: 768px) {
+body.dark-mode .section {
+    --section-text-color: #fff; 
+}
+
+body.dark-mode .texto-esquerda,
+body.dark-mode .texto-direita {
+    color: var(--section-text-color, inherit);
+}
+
+body.dark-mode .shape {
+    background-color: #003366; 
+}
+
+@media (min-width: 48rem) {
     .section {
         flex-direction: row;
         flex-wrap: wrap;
@@ -590,24 +681,27 @@ h1 {
         left: 4.813rem;
     }
 }
+}
 
 #contato {
-    max-width: 1200px;
+    max-width: 75rem;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 50px;
+    padding: 1.25rem;
+     * {
+    color: inherit;
 }
 
 .texto-centralizado {
     text-align: center;
-    color: #ffffff;
+    color: inherit;
 }
 
 .texto-centralizado h1 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .texto-centralizado p {
@@ -618,58 +712,59 @@ h1 {
 .icones {
     display: flex;
     justify-content: center;
-    gap: 200px;
-    margin: 30px 0;
+    gap: 12.5rem;
+    margin: 1.875rem 0;
+    background: #000;
 }
 
 .icones svg {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .formulario {
     background: #ffffff;
-    padding: 60px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    width: 585px;
-    max-width: 400px;
-    color: #000000;
+    padding: 3.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.25rem 0.75rem rgba(0,0,0,0.1);
+    width: 36.563rem;
+    max-width: 25rem;
+    color: #000;
     transform: translateX(30%);
 }
 
 .formulario h2 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
+    margin-bottom: 1.25rem;
+    color: inherit;
 }
 
 .formulario label {
     display: block;
-    margin-top: 15px;
+    margin-top: 0.938rem;
     font-weight: bold;
-    color: #000000;
+    color: inherit;
 }
 
 .formulario input,
 .formulario textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 0.625rem;
+    margin-top: 0.313rem;
+    border: 0.063rem solid #ddd;
+    border-radius: 0.313rem;
     font-family: 'Poppins', sans-serif;
-    color: #000000;
+    color: inherit;
 }
 
 .formulario button {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
-    padding: 12px;
+    padding: 0.75rem;
     background: #002E5B;
-    color: #ffffff;
+    color: inherit;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -685,4 +780,5 @@ h1 {
 
 .success {
     color: green;
+}
 }
