@@ -411,7 +411,7 @@ body>*:not(#fundo-troca) {
 
     #objetive .imageObjective img {
       width: 98vw;
-      max-width: 500px;
+      max-width: 600px;
       height: auto;
       margin: 0 auto;
       display: block;
@@ -485,7 +485,8 @@ body>*:not(#fundo-troca) {
   .imageObjective {
     img {
       @media (min-width: 320px) and (max-width: 1339px) {
-        width: 19rem;
+        flex-direction: column;;
+        width: 20rem;
       }
     }
   }
@@ -677,10 +678,11 @@ body>*:not(#fundo-troca) {
     }
 
     .slide-quem img {
-      width: 90vw;
-      height: auto;
+      width: 98vw;
       max-width: 400px;
+      height: auto;
       margin: 0 auto;
+      display: block
     }
 
     .quem-texto {
@@ -932,4 +934,31 @@ body>*:not(#fundo-troca) {
   .success {
     color: green;
   }
+
+  @media (min-width: 320px) and (max-width: 1339px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  
+  .texto-centralizado {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .icones {
+    gap: 2.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+  }
+  .icones svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .formulario {
+    width: 95vw;
+    max-width: 350px;
+    padding: 1.5rem;
+    transform: none;
+    margin: 0 auto;
+  }
+}
 }
