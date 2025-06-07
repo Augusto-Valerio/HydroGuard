@@ -26,10 +26,17 @@
       flex-direction: column;
       gap: 8rem;
 
-      @media (min-width: 320px) and (max-width: 1339px) {
-        top: 30%;
+     
+      @media (min-width: 320px) and (max-width: 592px) {
+        top: 15%;
         left: 5%;
-        gap: 5rem;
+        gap: 2rem;
+      }
+
+      @media (min-width: 593px) and (max-width: 751px) {
+        top: 20%;
+        left: 10%;
+        gap: 4rem;
       }
 
       h1 {
@@ -655,9 +662,9 @@
   text-align: center;
   font-size: 2.688rem;
   color: inherit;
-  font-family: Poppins;
+ 
   padding: 2rem;
-  box-sizing: border-box;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -769,10 +776,8 @@
   align-items: center;
   padding: 1.25rem;
 
-  * {
-    color: inherit;
-  }
-
+  
+  
   .texto-centralizado {
     text-align: center;
     color: inherit;
