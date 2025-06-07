@@ -11,6 +11,7 @@
     --bodyColor: #000000;
     --headerColor: #121212;
     --navColor: #D9D9D9;
+    --footerColor: #0D0D0D;
   
     /* Variáveis de fontes para 'Desktop' */
     --font-family: "Poppins", sans-serif;
@@ -21,5 +22,7 @@
     --text-lg: 700 4.375rem var(--font-family);
     --slideText: 400 1.438rem var(--font-family);
     --finalText:400 2.688rem var(--font-family);
-    --finalText-bold: 700 2rem var(--font-family);
+    --finalText-bold: 700 2rem var(--font-family);  
+    --footer-lg:700 2.188rem var(--font-family);
+    --footer-sm:400 1.063rem var(--font-family); ; 
   }
