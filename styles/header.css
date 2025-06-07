@@ -3,30 +3,27 @@ html, body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-}
+} 
 
 header {
   background-color: #000;
   position: fixed ;
-  top: 0;
-  display: flex;
+ 
+   display: flex;
   align-items: center;
   justify-content: flex-start;
 
   height: 72px;
   width: 100%;
-  z-index: 1000 !important;
+  z-index: 1000 !important; 
 }
 
-.nav-centralizar {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  height: 100%;
-  transform: translateX(-50%);
+ .nav-centralizar {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  transform: translateX(40%);
   z-index: 10;
 }
 

@@ -993,7 +993,7 @@ section,
 footer,
 .container,
 body>*:not(#fundo-troca) {
-  position: relative;
+ 
   z-index: 1;
   color: inherit;
 }
