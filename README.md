@@ -52,7 +52,16 @@ A landing page destaca:
 > A landing page também explica que o aplicativo principal da HydroGuard conta com **modo offline via SMS**, essencial em situações de emergência onde a conexão com a internet não está disponível.
 
 ---
+## Como Acessar o Repositório:
+link do repositório: [HydroGuard](https://github.com/Augusto-Valerio/HydroGuard)
 
+1. Fazer download e subir os arquivos para o repositório de vocês, clicando no botão Code e escolhendo a opção Download ZIP.
+
+2. Fazer um Fork, criando uma cópia do repositório em suas contas do GitHub. A opção Fork fica acima da descrição do repositório.
+   
+3. ([Link de acesso do site no GitHub pages:](https://augusto-valerio.github.io/HydroGuard/))
+   
+---
 ## Autores:
 - [Augusto Valerio](https://github.com/Augusto-Valerio).
 - [Jonas Esteves](https://github.com/Jonas-Franca).
